@@ -11,7 +11,7 @@ import { PlaceholderDirective } from '../shared/placeholder/placeholder.directiv
   templateUrl: './auth.component.html'
 })
 
-export class AuthComponent implements OnDestroy{
+export class AuthComponent implements OnDestroy {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
