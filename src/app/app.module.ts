@@ -39,19 +39,24 @@ import { PlaceholderDirective } from './shared/placeholder/placeholder.directive
     AuthComponent,
     LoadingSpinnerComponent,
     AlertComponent,
-    PlaceholderDirective
+    PlaceholderDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [ShoppingListService, RecipeService, {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}],
+  providers: [
+    ShoppingListService,
+    RecipeService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
-  entryComponents: [
-    AlertComponent
-  ]
 })
-export class AppModule { }
+export class AppModule {}
